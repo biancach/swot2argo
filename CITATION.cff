@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "swot2argo: upper-ocean density profiles from SWOT sea surface height, trained on Argo"
+version: 1.0.0
+date-released: 2026-11-06
+license: MIT
+repository-code: "https://github.com/biancach/swot2argo"
+authors:
+  - family-names: Champenois
+    given-names: Bianca
+  - family-names: Ali
+    given-names: Aalyaan
+  - family-names: Bodner
+    given-names: Abigail
+preferred-citation:
+  type: article
+  title: "Reconstructing 3D upper-ocean density from SWOT's wide-swath sea surface height using machine learning"
+  journal: "Geophysical Research Letters"
+  year: 2026
+  authors:
+    - family-names: Champenois
+      given-names: Bianca
+    - family-names: Ali
+      given-names: Aalyaan
+    - family-names: Bodner
+      given-names: Abigail

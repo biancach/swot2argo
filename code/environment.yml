@@ -1,0 +1,15 @@
+# conda env create -f environment.yml && conda activate swot2argo && pip install -e .
+# the versions this release was run with; newer ones should work
+name: swot2argo
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.8
+  - numpy=1.23
+  - pandas=1.5
+  - matplotlib=3.7
+  - cmocean=4.0
+  - pytorch=2.3
+  - jupyter
+  - pip

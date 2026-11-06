@@ -1,0 +1,114 @@
+Table S3. Total density RMSE 0-200 m (kg/m3); * = differs from the network with SWOT input (paired 90% interval excludes 0); persistence on the samples with a profile that many days earlier
+estimate                                        moorings              s2         gliders
+Climatology                                 0.221* n=1546    0.309* n=33      0.197* n=784 
+Climatology + mean Argo anomaly             0.243* n=1546    0.268* n=33      0.221* n=784 
+Network, SWOT input                         0.130  n=1546    0.154  n=33      0.131  n=784 
+Network, DUACS input                        0.135* n=1546    0.161* n=33      0.130  n=784 
+Persistence, in situ profile 3 days old     0.111  n=1398    0.160  n=32                --
+Persistence, in situ profile 7 days old     0.137  n=1316    0.196  n=33                --
+GLORYS12                                    0.120* n=1546    0.230* n=33      0.120* n=784 
+ARMOR3D                                     0.123* n=1546    0.185* n=33      0.113* n=784 
+HYCOM                                       0.130  n=1546    0.197* n=33      0.128  n=544 
+GLO12                                       0.167* n=1546    0.260* n=33      0.181* n=544 
+PWP                                         0.236* n=1546    0.306* n=33      0.209* n=544 
+  persistence 1 d: moorings 0.090 (network 0.130), s2 0.120 (network 0.154)
+  persistence 2 d: moorings 0.103 (network 0.131), s2 0.130 (network 0.154)
+  persistence 3 d: moorings 0.111 (network 0.131), s2 0.160 (network 0.155)
+  persistence 4 d: moorings 0.120 (network 0.131), s2 0.177 (network 0.155)
+  persistence 5 d: moorings 0.126 (network 0.130), s2 0.182 (network 0.155)
+  persistence 6 d: moorings 0.132 (network 0.130), s2 0.200 (network 0.155)
+  persistence 7 d: moorings 0.137 (network 0.131), s2 0.196 (network 0.154)
+
+Table S4. Per-mode skill on the four modes of the pretraining basis: cross-validation of the pretrained network over the pairs (SWOT input), and the network with SWOT input at the test sets
+  SSH                              R2      0.186  +0.55  -0.04  +0.01  -0.11
+  SST                              R2      0.222  +0.07  -0.04  +0.05  -0.02
+  MDT                              R2      0.226  +0.01  +0.01  -0.01  -0.02
+  SSH + SST                        R2      0.183  +0.58  -0.11  +0.10  -0.05
+  SSH + MDT                        R2      0.175  +0.61  +0.12  +0.11  -0.10
+  SST + MDT                        R2      0.227  -0.01  -0.03  +0.12  +0.05
+  SSH + SST + MDT                  R2      0.167  +0.65  +0.15  +0.26  +0.05
+  SD of the observed coefficient   SD             +1.13  +0.60  +0.46  +0.27
+  moorings (n=1546)                r2             +0.65  -0.85  +0.44  -0.01
+  moorings (n=1546)                skill          +0.84  +0.08  +0.58  +0.23
+  s2 (n=33)                        r2             +0.66  +0.16  -0.74  +0.18
+  s2 (n=33)                        skill          +0.80  +0.47  +0.12  +0.21
+  gliders (n=784)                  r2             +0.51  -1.64  +0.00  -0.60
+  gliders (n=784)                  skill          +0.82  -0.63  +0.53  +0.30
+
+Table S5. Network with SWOT input minus with DUACS input, RMSE 0-200 m (kg/m3), all samples and binned by |SWOT - DUACS SSHA| at the sample (thresholds: its median, 75th and 90th percentile)
+  moorings  all samples               n= 1546  SWOT 0.130  DUACS 0.135  -0.005 [-0.007, -0.003]*
+  moorings  < p50        from 0.0 cm  n=  773  SWOT 0.130  DUACS 0.127  +0.003 [+0.002, +0.005]*
+  moorings  p50-p75      from 1.1 cm  n=  386  SWOT 0.132  DUACS 0.134  -0.001 [-0.004, +0.002] 
+  moorings  p75-p90      from 1.9 cm  n=  232  SWOT 0.127  DUACS 0.140  -0.014 [-0.018, -0.010]*
+  moorings  > p90        from 2.6 cm  n=  155  SWOT 0.127  DUACS 0.165  -0.038 [-0.045, -0.031]*
+  s2        all samples               n=   33  SWOT 0.154  DUACS 0.161  -0.007 [-0.016, -0.000]*
+  s2        < p50        from 0.0 cm  n=   16  SWOT 0.146  DUACS 0.148  -0.001 [-0.004, +0.001] 
+  s2        p50-p75      from 1.0 cm  n=    8  SWOT 0.146  DUACS 0.150  -0.004 [-0.012, +0.005] 
+  s2        p75-p90      from 1.8 cm  n=    5  SWOT 0.180  DUACS 0.203  -0.023 [-0.041, +0.002] 
+  s2        > p90        from 2.4 cm  n=    4  SWOT 0.162  DUACS 0.175  -0.013 [-0.054, +0.022] 
+  gliders   all samples               n=  784  SWOT 0.131  DUACS 0.130  +0.001 [-0.002, +0.004] 
+  gliders   < p50        from 0.0 cm  n=  392  SWOT 0.134  DUACS 0.130  +0.004 [+0.002, +0.006]*
+  gliders   p50-p75      from 1.4 cm  n=  196  SWOT 0.133  DUACS 0.132  +0.002 [-0.002, +0.007] 
+  gliders   p75-p90      from 2.1 cm  n=  117  SWOT 0.123  DUACS 0.128  -0.005 [-0.013, +0.003] 
+  gliders   > p90        from 2.8 cm  n=   79  SWOT 0.117  DUACS 0.124  -0.008 [-0.021, +0.010] 
+
+Table S6. Signed horizontal gradient between profile pairs: observed rms (g/m3/km), correlation r with the observed one († = 90% interval includes 0), dr = r SWOT - r DUACS (* = interval excludes 0), amplitude, fraction of signs right, and r of GLORYS12 and ARMOR3D
+  ML interior moorings 9-12 km  n= 698 obs   7.5  r +0.28  +0.16  dr +0.12*  amp 0.31 0.25  sign 0.59  GLORYS12 +0.07  ARMOR3D +0.15
+  ML interior moorings 18-22 km n= 677 obs   4.5  r +0.36  +0.22  dr +0.14*  amp 0.44 0.39  sign 0.59  GLORYS12 +0.08  ARMOR3D +0.29
+  ML interior moorings 29-31 km n= 546 obs   3.4  r +0.39  +0.21  dr +0.18*  amp 0.56 0.52  sign 0.56  GLORYS12 +0.20  ARMOR3D +0.31
+  ML interior moorings 39-60 km n=1033 obs   2.6  r +0.57  +0.49  dr +0.09*  amp 0.68 0.64  sign 0.66  GLORYS12 +0.36  ARMOR3D +0.50
+  ML interior gliders  1-3 km   n= 403 obs  53.0  r -0.09† -0.01† dr -0.08   amp 0.14 0.07  sign 0.50  GLORYS12 -0.05  ARMOR3D -0.00
+  ML interior gliders  3-7 km   n= 605 obs  23.6  r -0.01† +0.06† dr -0.07   amp 0.19 0.10  sign 0.47  GLORYS12 +0.02  ARMOR3D -0.05
+  ML interior gliders  7-15 km  n= 915 obs  13.1  r +0.13  +0.05† dr +0.08   amp 0.25 0.15  sign 0.55  GLORYS12 +0.16  ARMOR3D +0.10
+  ML interior gliders  15-30 km n=1151 obs   7.0  r +0.14† -0.00† dr +0.14*  amp 0.36 0.27  sign 0.54  GLORYS12 +0.30  ARMOR3D +0.16
+  75 m        moorings 9-12 km  n= 698 obs  16.3  r +0.54  +0.37  dr +0.16*  amp 0.36 0.23  sign 0.70  GLORYS12 +0.33  ARMOR3D +0.25
+  75 m        moorings 18-22 km n= 677 obs  11.4  r +0.69  +0.56  dr +0.13*  amp 0.41 0.32  sign 0.72  GLORYS12 +0.45  ARMOR3D +0.53
+  75 m        moorings 29-31 km n= 546 obs  10.0  r +0.71  +0.57  dr +0.14*  amp 0.44 0.37  sign 0.79  GLORYS12 +0.33  ARMOR3D +0.47
+  75 m        moorings 39-60 km n=1033 obs   8.6  r +0.86  +0.82  dr +0.04*  amp 0.48 0.41  sign 0.80  GLORYS12 +0.75  ARMOR3D +0.77
+  75 m        gliders  1-3 km   n= 403 obs  83.6  r +0.05† +0.12† dr -0.06   amp 0.19 0.07  sign 0.48  GLORYS12 +0.09  ARMOR3D +0.02
+  75 m        gliders  3-7 km   n= 605 obs  37.0  r +0.09† +0.14  dr -0.06   amp 0.29 0.11  sign 0.50  GLORYS12 +0.20  ARMOR3D +0.02
+  75 m        gliders  7-15 km  n= 915 obs  18.9  r +0.28  +0.43  dr -0.15*  amp 0.42 0.18  sign 0.61  GLORYS12 +0.39  ARMOR3D +0.20
+  75 m        gliders  15-30 km n=1151 obs  11.9  r +0.47  +0.68  dr -0.21*  amp 0.48 0.27  sign 0.68  GLORYS12 +0.60  ARMOR3D +0.40
+  ML base     moorings 9-12 km  n= 698 obs  17.5  r +0.29  +0.11  dr +0.18*  amp 0.21 0.16  sign 0.62  GLORYS12 +0.07  ARMOR3D +0.06
+  ML base     moorings 18-22 km n= 677 obs   9.0  r +0.38  +0.24  dr +0.14*  amp 0.34 0.30  sign 0.62  GLORYS12 +0.04  ARMOR3D +0.21
+  ML base     moorings 29-31 km n= 546 obs   6.8  r +0.43  +0.26  dr +0.17*  amp 0.46 0.41  sign 0.62  GLORYS12 +0.07  ARMOR3D +0.21
+  ML base     moorings 39-60 km n=1033 obs   5.0  r +0.56  +0.47  dr +0.09*  amp 0.59 0.54  sign 0.65  GLORYS12 +0.35  ARMOR3D +0.44
+  ML base     gliders  1-3 km   n= 403 obs  82.6  r +0.02† -0.01† dr +0.03   amp 0.14 0.07  sign 0.48  GLORYS12 +0.04  ARMOR3D +0.03
+  ML base     gliders  3-7 km   n= 605 obs  34.7  r +0.05† +0.04† dr +0.01   amp 0.21 0.11  sign 0.49  GLORYS12 +0.05  ARMOR3D +0.05
+  ML base     gliders  7-15 km  n= 915 obs  16.9  r +0.13  +0.15  dr -0.02   amp 0.33 0.18  sign 0.54  GLORYS12 +0.13  ARMOR3D +0.12
+  ML base     gliders  15-30 km n=1151 obs   8.8  r +0.14  +0.24  dr -0.09*  amp 0.47 0.34  sign 0.58  GLORYS12 +0.22  ARMOR3D +0.21
+
+Table S7. Mixed-layer depth (0.125 kg/m3 above 10 m): MAE, bias (predicted - observed) and r (m); total density RMSE over 0-30 m and 30-100 m (kg/m3)
+  moorings  Climatology            n= 1546  MAE  9.9  bias  +6.1  r 0.68  RMSE 0-30 m 0.150  30-100 m 0.321
+  moorings  Network, SWOT input    n= 1546  MAE  9.4  bias  -4.3  r 0.72  RMSE 0-30 m 0.140  30-100 m 0.172
+  moorings  Network, DUACS input   n= 1546  MAE  9.5  bias  -4.4  r 0.72  RMSE 0-30 m 0.140  30-100 m 0.178
+  moorings  GLORYS12               n= 1546  MAE  7.7  bias  -0.1  r 0.76  RMSE 0-30 m 0.104  30-100 m 0.166
+  moorings  ARMOR3D                n= 1546  MAE  8.6  bias  -3.7  r 0.74  RMSE 0-30 m 0.132  30-100 m 0.170
+  moorings  HYCOM                  n= 1546  MAE  8.6  bias  -3.3  r 0.72  RMSE 0-30 m 0.142  30-100 m 0.176
+  s2        Climatology            n=   33  MAE 10.0  bias  +4.5  r 0.56  RMSE 0-30 m 0.455  30-100 m 0.341
+  s2        Network, SWOT input    n=   33  MAE 11.4  bias  -2.3  r 0.39  RMSE 0-30 m 0.170  30-100 m 0.175
+  s2        Network, DUACS input   n=   33  MAE 11.2  bias  -1.8  r 0.40  RMSE 0-30 m 0.175  30-100 m 0.190
+  s2        GLORYS12               n=   33  MAE  9.7  bias  +0.0  r 0.56  RMSE 0-30 m 0.281  30-100 m 0.281
+  s2        ARMOR3D                n=   33  MAE 11.8  bias  -4.8  r 0.48  RMSE 0-30 m 0.222  30-100 m 0.250
+  s2        HYCOM                  n=   33  MAE 10.6  bias  -5.5  r 0.62  RMSE 0-30 m 0.225  30-100 m 0.267
+  gliders   Climatology            n=  784  MAE  8.5  bias  +6.1  r 0.51  RMSE 0-30 m 0.161  30-100 m 0.284
+  gliders   Network, SWOT input    n=  784  MAE  6.2  bias  -2.7  r 0.57  RMSE 0-30 m 0.159  30-100 m 0.160
+  gliders   Network, DUACS input   n=  784  MAE  6.3  bias  -2.9  r 0.58  RMSE 0-30 m 0.158  30-100 m 0.158
+  gliders   GLORYS12               n=  784  MAE  6.8  bias  -1.0  r 0.40  RMSE 0-30 m 0.115  30-100 m 0.158
+  gliders   ARMOR3D                n=  784  MAE  7.4  bias  -4.8  r 0.55  RMSE 0-30 m 0.136  30-100 m 0.146
+  gliders   HYCOM                  n=  544  MAE  9.2  bias  -2.7  r 0.27  RMSE 0-30 m 0.147  30-100 m 0.169
+
+Table S8. The configurations tried, SWOT input: cross-validation RMSE over the pairs, and RMSE 0-200 m at the test sets after training on all pairs (kg/m3)
+  ridge, SSH, 1 modes                                                         CV 0.187  moorings 0.132  s2 0.172  gliders 0.122
+  ridge, SSH + SST + MDT, 4 modes (selected)                                  CV 0.182  moorings 0.130  s2 0.181  gliders 0.124
+  pairs, SSH + SST + MDT, 4 modes                                             CV 0.171  moorings 0.122  s2 0.162  gliders 0.122
+  pairs, SSH + SST + MDT + SSS, 4 modes (selected)                            CV 0.169  moorings 0.119  s2 0.156  gliders 0.123
+  pretrained, SSH, 4 modes                                                    CV 0.186  moorings 0.128  s2 0.171  gliders 0.126
+  pretrained, SSH + SST, 4 modes                                              CV 0.183  moorings 0.128  s2 0.171  gliders 0.126
+  pretrained, SSH + MDT, 4 modes                                              CV 0.175  moorings 0.122  s2 0.165  gliders 0.121
+  pretrained, SSH + SST + MDT, 4 modes (selected, reported)                   CV 0.167  moorings 0.130  s2 0.154  gliders 0.131
+  pretrained, SSH + SST + MDT + SSS, 4 modes                                  CV 0.168  moorings 0.121  s2 0.154  gliders 0.123
+  pretrained, SSH + SST + MDT + bathymetry, 4 modes (excluded)                CV 0.165  moorings 0.116  s2 0.174  gliders 0.128
+  pretrained, SSH + SST + MDT + latitude-longitude, 4 modes (excluded)        CV 0.166  moorings 0.114  s2 0.150  gliders 0.117
+  pretrained, SSH + SST + MDT + ERA5, 4 modes (excluded)                      CV 0.161  moorings 0.149  s2 0.163  gliders 0.145
+  pretrained, SSH + SST + MDT, 40 levels                                      CV 0.167  moorings 0.133  s2 0.154  gliders 0.134

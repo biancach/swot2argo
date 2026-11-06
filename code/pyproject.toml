@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swot2argo"
+version = "1.0.0"
+description = "Upper-ocean density profiles from SWOT sea surface height, trained on Argo"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Bianca Champenois"}, {name = "Aalyaan Ali"}, {name = "Abigail Bodner"}]
+dependencies = ["numpy>=1.23", "pandas>=1.5", "matplotlib>=3.7", "cmocean>=3.0", "torch>=2.0"]
+
+[project.optional-dependencies]
+notebooks = ["jupyter"]
+
+[tool.setuptools]
+packages = ["swot2argo"]
