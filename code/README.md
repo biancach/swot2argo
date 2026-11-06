@@ -100,6 +100,7 @@ crossover statistics of Figure 3a) is not part of this repository.
 ## Citing
 
 Champenois, B., Ali, A., and Bodner, A. (2026). Reconstructing 3D upper-ocean density from SWOT's wide-swath sea
-surface height using machine learning. *Geophysical Research Letters*. Code and data: this repository and its Zenodo
-archive. See [../CITATION.cff](../CITATION.cff). The code is under the MIT license ([../LICENSE](../LICENSE)); the
+surface height using machine learning. *Geophysical Research Letters*. Code and data: Champenois, B., Ali, A., and
+Bodner, A. (2026). swot2argo (v1.0.0, the version of the paper). Zenodo. https://doi.org/10.5281/zenodo.24023823 (all
+versions: https://doi.org/10.5281/zenodo.24023822). See [../CITATION.cff](../CITATION.cff). The code is under the MIT license ([../LICENSE](../LICENSE)); the
 data terms are in [../data/README.md](../data/README.md).

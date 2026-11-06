@@ -1,5 +1,7 @@
 # swot2argo
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24023822.svg)](https://doi.org/10.5281/zenodo.24023822)
+
 Code and data for *Reconstructing 3D upper-ocean density from SWOT's wide-swath sea surface height using machine
 learning* (Champenois, Ali and Bodner).
 
